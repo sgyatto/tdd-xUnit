@@ -11,3 +11,4 @@
   * [第20章 後片付け](https://github.com/sgyatto/tdd-xUnit/pull/3)
   * [第21章 数え上げ](https://github.com/sgyatto/tdd-xUnit/pull/4)
   * [第22章 失敗の扱い](https://github.com/sgyatto/tdd-xUnit/pull/5)
+  * [第23章 スイートにまとめる](https://github.com/sgyatto/tdd-xUnit/pull/6)
