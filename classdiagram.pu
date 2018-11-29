@@ -1,0 +1,44 @@
+@startuml
+title tdd-xUnit
+
+Class TestSuite {
+  tests : list
+  add(test : TestCase) : void
+  run(result : TestResult) : void
+}
+Class TestCase {
+  name : string
+  setUp() : void
+  tearDown() : void
+  run(result : TestResult) : void
+}
+Class WasRun {
+  log : string
+  setUp() : void
+  testMethod() : void
+  testBrokenMethod() : void
+  tearDown() : void
+}
+Class TestCaseTest {
+  result : TestResult
+  setUp() : void
+  testTemplateMethod() : void
+  testResult() : void
+  testFailedResult() : void
+  testFailedResultFormatting() : void
+  testSuite() : void
+}
+Class TestResult {
+  runCount : int
+  errorCount : int
+  testStarted() : void
+  testFailed() : void
+  summary() : string
+}
+
+TestSuite "0..1" o-- "*" TestCase
+TestCase <|-- WasRun
+TestCase <|-- TestCaseTest
+TestCaseTest "1" -- "1" TestResult
+
+@enduml
